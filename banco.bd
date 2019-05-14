@@ -1,0 +1,24 @@
+CREATE TABLE public.categoria
+(
+    id serial NOT NULL PRIMARY KEY,
+    descricao character varying(100) NOT NULL,
+    valor_diario float NOT NULL
+)
+
+CREATE TABLE public.carro
+(
+    id serial NOT NULL PRIMARY KEY,
+    modelo character varying(50) NOT NULL,
+    marca character varying(30) NOT NULL,
+    placa character varying(10) NOT NULL,
+    categoria REFERENCES categoria(id),
+    ano integer NOT NULL
+)
+
+CREATE TABLE public.usuario
+(
+    id serial NOT NULL PRIMARY KEY,
+    nome character varying(30) NOT NULL,
+    login character varying(30) NOT NULL,
+    senha character varying(30) NOT NULL
+)
