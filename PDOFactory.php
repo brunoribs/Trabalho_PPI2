@@ -6,7 +6,7 @@
         public static function getConexao()
         {
             if(!isset($pdo)){
-				$conexao = "pgsql:host=localhost;dbname=app_produtos";
+				$conexao = "pgsql:host=localhost;dbname=bd_trabalho_ppi2";
 				$usuario = "postgres";
 				$senha = "postgres";
 

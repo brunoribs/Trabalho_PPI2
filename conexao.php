@@ -2,7 +2,7 @@
 
 /*$user = "postgresql"
 $senha = "postgresql"
-$conexao = "pgsql:host=localhost:5432;dbname=app_produtos";
+$conexao = "pgsql:host=localhost:5432;dbname=bd_trabalho_ppi2";
 $pdo = new PDO($conexao,$user,$senha);*/
 
         $db_host = "localhost";
