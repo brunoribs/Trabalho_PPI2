@@ -15,7 +15,7 @@ $app->group('/carros', function() use ($app) {
     $app->get('/{id}','CarroController:buscarPorId');    
     $app->put('/{id}','CarroController:atualizar');
     $app->delete('/{id}', 'CarroController:deletar');
-})->add('UsuarioController:validarToken');
+});//->add('UsuarioController:validarToken');
 
 $app->post('/usuarios','UsuarioController:inserir');
 
