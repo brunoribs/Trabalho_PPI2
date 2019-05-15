@@ -2,19 +2,19 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-include_once('ProdutoController.php');
+include_once('CarroController.php');
 include_once('UsuarioController.php');
 require './vendor/autoload.php';
 
 $app = new \Slim\App;
 	
-$app->group('/produtos', function() use ($app) {
-    $app->get('','ProdutoController:listar');
-    $app->post('','ProdutoController:inserir');
+$app->group('/carros', function() use ($app) {
+    $app->get('','CarroController:listar');
+    $app->post('','CarroController:inserir');
 
-    $app->get('/{id}','ProdutoController:buscarPorId');    
-    $app->put('/{id}','ProdutoController:atualizar');
-    $app->delete('/{id}', 'ProdutoController:deletar');
+    $app->get('/{id}','CarroController:buscarPorId');    
+    $app->put('/{id}','CarroController:atualizar');
+    $app->delete('/{id}', 'CarroController:deletar');
 })->add('UsuarioController:validarToken');
 
 $app->post('/usuarios','UsuarioController:inserir');
